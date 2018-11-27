@@ -1,0 +1,11 @@
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+
+
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-info"><%= link_to 'back to list', articles_path %></button>
+  <button type="button" class="btn btn-default"><%= link_to 'edit this article', edit_article_path %></button>
+  <button type="button" class="btn btn-danger"><%= link_to "Delete", article_path(@article),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></button>
+</div>
